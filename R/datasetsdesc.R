@@ -30,7 +30,7 @@ if(FALSE){
 if(FALSE){
   Tax.Reform=expand.grid(Affiliation=as.factor(c("Democrat","Republican")),Opinion=as.factor(c("favor","indifferent","opposed")))[rep(1:6,times=c(138,64,83,67,64,84)),]
   write.csv(Tax.Reform,file="ext/Tax.Reform.csv",row.names = FALSE)
-  save(Tax.Reform,file="data/Tax.Reform.rda")
+  devtools::use_data(Tax.Reform,overwrite = TRUE)
 }
 
 #' Political Affiliation and Opinion and Tax Reform.
